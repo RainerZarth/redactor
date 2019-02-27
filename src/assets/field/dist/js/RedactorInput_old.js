@@ -47,7 +47,6 @@ window.livePreviewHideFullscreen = false;
                 this.redactorConfig.plugins.push('craftAssetImages');
                 this.redactorConfig.plugins.push('craftAssetFiles');
                 this.redactorConfig.plugins.push('craftEntryLinks');
-                this.redactorConfig.plugins.push('craftEntryLinks2');
                 this.redactorConfig.plugins.push('craftAssetImageEditor');
 
                 // Redactor I/II config setting normalization
@@ -136,17 +135,9 @@ window.livePreviewHideFullscreen = false;
 
                 if (toolbarButtons.indexOf('link') !== -1) {
                     this.redactor.plugin.craftEntryLinks.setElementSiteId(this.elementSiteId);
-
+                    
                     if (this.linkOptions.length) {
                         this.redactor.plugin.craftEntryLinks.setLinkOptions(this.linkOptions);
-                    }
-                }
-                
-                if (toolbarButtons.indexOf('addlink') !== -1) {
-                    this.redactor.plugin.craftEntryLinks2.setElementSiteId(this.elementSiteId);
-
-                    if (this.linkOptions.length) {
-                        this.redactor.plugin.craftEntryLinks2.setLinkOptions(this.linkOptions);
                     }
                 }
 
